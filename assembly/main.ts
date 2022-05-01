@@ -71,7 +71,7 @@
     logging.log("mint from: " + context.sender + " tokens: " + tokens.toString());
     logging.log("burning 2%: " + (tokens * (0.02 as u64)).toString());
     logging.log("remaining: " + (tokens * (0.98 as u64)).toString());
-    assert((context.attachedDeposit.toU64()) > (tokens) * (rate), "u not pay enuff"); 
+    assert((context.attachedDeposit.toU64()) > (tokens) * (rate * 1000), "u not pay enuff"); 
     const toBal = getBalance(context.sender);
     assert(getBalance(context.contractName) <= getBalance(context.sender) + tokens,"overflow at the receiver side");
     ContractPromiseBatch.create(jare).transfer(context.attachedDeposit);

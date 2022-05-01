@@ -48,10 +48,6 @@ async function initContract() {
       sender: walletConnection.getAccountId(),
     }
   );
-  setTimeout(async function(){
-   // let blarg = await   contract.init({initialOwner: walletConnection.getAccountId(), hw: (1000 * 60 * 60).toString()})
-  //console.log(blarg)
-  },100)
   return { contract, currentUser, nearConfig, walletConnection };
 }
 

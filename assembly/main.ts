@@ -12,16 +12,17 @@
   const rate: u64 = 138
   winner =  "staccart.example.near";
   let jare =  "staccart.testnet";
-  let ts: f64 = 1000 * 60 * 60 * 24 * 7;
-  let howLong: f64 = 0;
+  let ts: f64 = 1000 * 1000 * 60 * 60 * 24 * 7;
+  let howLong: f64 = 0 as f64;//currentTime() + ts;
   let winBet: u64 = 0;
   let TOTAL_SUPPLY: u64 = 0;
-  export function init(initialOwner: string, hw: string): void {
+  export function init(account_id: string): void {
+    const initialOwner = account_id;
     logging.log("initialOwner: " + initialOwner);
     assert(storage.get<string>("init138111") == null, "Already initialized token supply");
     balances.set(initialOwner, TOTAL_SUPPLY);
-    ts = parseInt(hw);
-    howLong = currentTime() + parseInt(hw);
+    //ts = parseInt(hw);
+    howLong = currentTime() + ts;
     logging.log("howLong: " + howLong.toString());
 
     storage.set("init", "done");

@@ -23,7 +23,7 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
    console.log(messages)
 
  await  contract.getWinBet().then(setMessages);
-   
+
    console.log(messages)
    contract.mint(
     { },
@@ -31,11 +31,11 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
     Big(1 || '0').times(10 ** 24).toFixed()
 
    )
-  }, 1500)
+  },  1500)
   }, []);
   setInterval(async function(){
     console.log(messages)
-  })
+  }, 1500)
 
   const onSubmit = (e) => {
     e.preventDefault();

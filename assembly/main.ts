@@ -51,19 +51,19 @@
 
   export function transfer(tokens: u64, to: string): boolean {
     logging.log("transfer from: " + context.sender + " to: " + to + " tokens: " + tokens.toString());
-    logging.log("burning 2%: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(2)).toString());
-    logging.log("remaining: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(98)).toString());
+    logging.log("burning 2%: " + u128.div(u128.mul((u128.from(tokens)),u128.from(100)),u128.from(2)).toString());
+    logging.log("remaining: " + u128.div(u128.mul((u128.from(tokens)),u128.from(100)),u128.from(98)).toString());
     const fromAmount = getBalance(context.sender);
     const toBal = getBalance(to);
     assert(fromAmount >= tokens, "not enough tokens on account");
     assert(getBalance(to) <= getBalance(to) + tokens,"overflow at the receiver side");
     balances.set(context.sender, fromAmount - tokens);
-    
-    const toAdd = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(2));
-    const toAdd2 = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(98));
+    /*
+    const toAdd = u128.div(u128.mul(u128.from(toBal + tokens), u128.from(100)), u128.from(2));
+    const toAdd2 = u128.div(u128.mul(u128.from(toBal + tokens), u128.from(100)), u128.from(98));
     balances.set("system",toAdd.toU64()); // magik
     balances.set(to,toAdd2.toU64());
-    
+    */
     return true;
   }
   
@@ -72,18 +72,21 @@
 
     const tokens: u64 = ((context.attachedDeposit.toU64()) / (rate) * 1000) as u64;
     logging.log("mint from: " + context.sender + " tokens: " + tokens.toString());
-    logging.log("burning 2%: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(2)).toString());
-    logging.log("remaining: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(98)).toString());
-    assert((context.attachedDeposit.toU64()) > (tokens) * (rate * 1000), "u not pay enuff"); 
     const toBal = getBalance(context.sender);
+/*
+    const toAdd = u128.div(u128.mul(u128.from(toBal + tokens), u128.from(100)), u128.from(2));
+    const toAdd2 = u128.div(u128.mul(u128.from(toBal + tokens), u128.from(100)), u128.from(98));
+
+    logging.log("1: " + toAdd.toString());
+    logging.log("2: " + toAdd2.toString());
+    assert((context.attachedDeposit.toU64()) > (tokens) * (rate * 1000), "u not pay enuff"); 
     assert(getBalance(context.contractName) <= getBalance(context.sender) + tokens,"overflow at the receiver side");
     ContractPromiseBatch.create(jare).transfer(context.attachedDeposit);
-    const toAdd = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(2));
-    const toAdd2 = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(98));
 
     balances.set("system", toAdd.toU64()); // magik
     balances.set(context.sender, toAdd2.toU64());
     TOTAL_SUPPLY = TOTAL_SUPPLY + tokens;
+    */
     return true;
   }
   export function getWinBet(): string | null {
@@ -125,16 +128,16 @@
     
 
     balances.set(context.sender, fromAmount - tokens);
-
-    const toAdd = u128.mul(u128.div(u128.add(u128.from(contractAmount),u128.from(tokens)), u128.from(100)), u128.from(2));
-    const toAdd2 = u128.mul(u128.div(u128.add(u128.from(getBalance(context.contractName)),u128.from(tokens)), u128.from(100)), u128.from(98));
+/*
+    const toAdd = u128.div(u128.mul(u128.from(contractAmount + tokens), u128.from(100)), u128.from(2));
+    const toAdd2 = u128.div(u128.mul(u128.from(contractAmount + tokens), u128.from(100)), u128.from(98));
 
     balances.set("system", toAdd.toU64()); // magik
     balances.set(context.contractName, toAdd2.toU64());
     winner =  context.sender;
     howLong = currentTime() + ts;
     winBet = fromAmount;
-
+*/
     return true;
   }
 

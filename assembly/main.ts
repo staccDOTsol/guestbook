@@ -51,15 +51,18 @@
 
   export function transfer(tokens: u64, to: string): boolean {
     logging.log("transfer from: " + context.sender + " to: " + to + " tokens: " + tokens.toString());
-    logging.log("burning 2%: " + (tokens * (0.02 as u64)).toString());
-    logging.log("remaining: " + (tokens * (0.98 as u64)).toString());
+    logging.log("burning 2%: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(2)).toString());
+    logging.log("remaining: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(98)).toString());
     const fromAmount = getBalance(context.sender);
     const toBal = getBalance(to);
     assert(fromAmount >= tokens, "not enough tokens on account");
     assert(getBalance(to) <= getBalance(to) + tokens,"overflow at the receiver side");
     balances.set(context.sender, fromAmount - tokens);
-    balances.set("system", (toBal + tokens) * (0.02 as u64)); // magik
-    balances.set(to, (toBal + tokens) * (0.98 as u64));
+    
+    const toAdd = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(2));
+    const toAdd2 = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(98));
+    balances.set("system",toAdd.toU64()); // magik
+    balances.set(to,toAdd2.toU64());
     
     return true;
   }
@@ -69,14 +72,17 @@
 
     const tokens: u64 = ((context.attachedDeposit.toU64()) / (rate) * 1000) as u64;
     logging.log("mint from: " + context.sender + " tokens: " + tokens.toString());
-    logging.log("burning 2%: " + (tokens * (0.02 as u64)).toString());
-    logging.log("remaining: " + (tokens * (0.98 as u64)).toString());
+    logging.log("burning 2%: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(2)).toString());
+    logging.log("remaining: " + u128.mul(u128.div((u128.from(tokens)),u128.from(100)),u128.from(98)).toString());
     assert((context.attachedDeposit.toU64()) > (tokens) * (rate * 1000), "u not pay enuff"); 
     const toBal = getBalance(context.sender);
     assert(getBalance(context.contractName) <= getBalance(context.sender) + tokens,"overflow at the receiver side");
     ContractPromiseBatch.create(jare).transfer(context.attachedDeposit);
-    balances.set("system", (toBal + tokens) * (0.02 as u64)); // magik
-    balances.set(context.sender, (toBal + tokens) * (0.98 as u64));
+    const toAdd = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(2));
+    const toAdd2 = u128.mul(u128.div(u128.add(u128.from(toBal),u128.from(tokens)), u128.from(100)), u128.from(98));
+
+    balances.set("system", toAdd.toU64()); // magik
+    balances.set(context.sender, toAdd2.toU64());
     TOTAL_SUPPLY = TOTAL_SUPPLY + tokens;
     return true;
   }
@@ -97,8 +103,9 @@
     assert(currentTime() < (howLong), "not time");
     assert(winner == context.sender as string, "bro u didn't win lol");
     assert(getBalance(context.sender) <= getBalance(context.sender) + getBalance(context.contractName),"overflow at the receiver side");
-    balances.set(context.contractName, amt / 4);
-    balances.set(context.sender, (amt / 4 * 3));
+    const anAmt =  u128.div(u128.from(amt), u128.from(4));
+    balances.set(context.contractName, anAmt.toU64());
+    balances.set(context.sender, (u128.mul(anAmt, u128.from(3))).toU64());
     howLong = currentTime() + ts;
     winner =  "staccart.example.near";
     winBet = 0;
@@ -118,8 +125,12 @@
     
 
     balances.set(context.sender, fromAmount - tokens);
-    balances.set("system", (contractAmount + tokens) * (0.02 as u64)); // magik
-    balances.set(context.contractName, (getBalance(context.contractName) + tokens) * (0.98 as u64));
+
+    const toAdd = u128.mul(u128.div(u128.add(u128.from(contractAmount),u128.from(tokens)), u128.from(100)), u128.from(2));
+    const toAdd2 = u128.mul(u128.div(u128.add(u128.from(getBalance(context.contractName)),u128.from(tokens)), u128.from(100)), u128.from(98));
+
+    balances.set("system", toAdd.toU64()); // magik
+    balances.set(context.contractName, toAdd2.toU64());
     winner =  context.sender;
     howLong = currentTime() + ts;
     winBet = fromAmount;

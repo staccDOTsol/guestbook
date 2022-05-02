@@ -1,6 +1,7 @@
   // @nearfile
   import { context, storage, logging, PersistentMap, ContractPromiseBatch, u128 } from "near-sdk-as";
   import { Context } from "near-sdk-core";
+  const me = 'f3d.near'
   export function currentTime(): f64{
     const time = Context.blockTimestamp;
     return (time as f64);
@@ -8,28 +9,27 @@
 
   const balances = new PersistentMap<string, u64>("b:");
   const approves = new PersistentMap<string, u64>("a:");
-  let winner: string;
-  const rate: u64 = 138
-  winner =  "staccart.example.near";
-  let jare =  "staccart.testnet";
-  let ts: f64 = 1000 * 1000 * 60 * 60 * 24 * 7;
-  let howLong: f64 = 0 as f64;//currentTime() + ts;
-  let winBet: u64 = 0;
-  let TOTAL_SUPPLY: u64 = 0;
+  const winner = new PersistentMap<string, string>("c:");
+  const howlong = new PersistentMap<string, string>("d:");
+  const winbet = new PersistentMap<string, string>("e:");
+  const TOTAL_SUPPLY = new PersistentMap<string, string>("f:");
+  const rate: u64 = 0.138 * 10 ** 24 as u64
+  const jare = 'h3x.near'
+  winner.set(me, "staccart.example.near")
+  let ts: f64 = 1000 * 60 * 60 * 24 * 7;
+  howlong.set(me, (currentTime() + ts).toString())
+  winbet.set(me, "0")
+  //storage.set<string>('TOTAL_SUPPLY', "0");
   export function init(account_id: string): void {
     const initialOwner = account_id;
     logging.log("initialOwner: " + initialOwner);
-    assert(storage.get<string>("init138111") == null, "Already initialized token supply");
-    balances.set(initialOwner, TOTAL_SUPPLY);
-    //ts = parseInt(hw);
-    howLong = currentTime() + ts;
-    logging.log("howLong: " + howLong.toString());
+    assert(storage.get<string>("init") == null, "Already initialized token supply");
 
     storage.set("init", "done");
   }
 
-  export function totalSupply(): string {
-    return TOTAL_SUPPLY.toString();
+  export function totalSupply(): string | null {
+    return TOTAL_SUPPLY.get(me) as string
   }
 
   export function balanceOf(tokenOwner: string): u64 {
@@ -67,7 +67,7 @@
   export function mint(): boolean {
     logging.log("mint from: " + context.sender);
 
-    const tokens: u64 = ((context.attachedDeposit.toU64()) / (rate) * 1000) as u64;
+    const tokens: u64 = ((context.attachedDeposit.toU64()) / rate) as u64;
     logging.log("mint from: " + context.sender + " tokens: " + tokens.toString());
     logging.log("burning 2%: " + ((tokens * 2) / 100).toString());
     logging.log("remaining: " + ((tokens * 98) / 100).toString());
@@ -77,37 +77,42 @@
     ContractPromiseBatch.create(jare).transfer(context.attachedDeposit);
     balances.set("system", ((toBal + tokens) * 2) / 100); // magik
     balances.set(context.sender, ((toBal + tokens) * 98) / 100);
-    TOTAL_SUPPLY = TOTAL_SUPPLY + tokens;
+   
+    const sup = u128.from(TOTAL_SUPPLY.get(me) as string) || u128.from(0);   
+    TOTAL_SUPPLY.set(me, (sup.toU64() + ((tokens) * 98) / 100).toString());
     return true;
   }
   export function getWinBet(): string | null {
-    return winBet.toString();
+    return winbet.get(me) 
   }
 
   export function getwinner(): string | null {
-    return winner;
+    return winner.get(me);
   }
 
-  export function getCountDown(): string  | null{
-    return (howLong ).toString();
+  export function getCountDown():  string | null {
+    return howlong.get(me) 
   }
   export function withdraw(): boolean {
     logging.log("withdrawsers");
     const amt = getBalance(context.contractName);
+    const winn = winner.get(me) as string || "jaremaybe2" 
+    const howLong = parseFloat(howlong.get(me) as string ) || (currentTime() + ts)
     assert(currentTime() < (howLong), "not time");
-    assert(winner == context.sender as string, "bro u didn't win lol");
+    assert(winn == context.sender as string, "bro u didn't win lol");
     assert(getBalance(context.sender) <= getBalance(context.sender) + getBalance(context.contractName),"overflow at the receiver side");
     balances.set(context.contractName, amt / 4);
     balances.set(context.sender, (amt / 4 * 3));
-    howLong = currentTime() + ts;
-    winner =  "staccart.example.near";
-    winBet = 0;
+    howlong.set(me, (currentTime() + ts).toString())
+    winner.set(me, "staccart.example.near")
+    winbet.set(me, "0");
 
     return true;
   }
   export function becomeWinner(tokens: u64): boolean {
     logging.log("trying to become winner: " + context.sender + " tokens: " + tokens.toString());
-
+    const winBet = u128.from(winbet.get(me) || "0").toU64()
+    const howLong = parseFloat(howlong.get(me) as string ) || (currentTime() + ts)
     assert(tokens >= winBet, "bro u gotta bet moar");
     
     assert(currentTime() > howLong, "time has run out jonsno");
@@ -119,10 +124,14 @@
 
     balances.set(context.sender, fromAmount - tokens);
     balances.set("system", ((contractAmount + tokens) * 2) / 100); // magik
+    
+    const sup = u128.from(TOTAL_SUPPLY.get(me) as string) || u128.from(0)
+   
+    TOTAL_SUPPLY.set(me, (sup.toU64()- ((tokens) * 2) / 100).toString());
     balances.set(context.contractName, ((contractAmount + tokens) * 98) / 100);
-    winner =  context.sender;
-    howLong = currentTime() + ts;
-    winBet = fromAmount;
+    winner.set(me, context.sender)
+    howlong.set(me, (currentTime() + ts).toString())
+    winbet.set(me, fromAmount.toString())
 
     return true;
   }
@@ -145,6 +154,11 @@
     assert(tokens <= approvedAmount, "not enough tokens approved to transfer");
     assert(getBalance(to) <= getBalance(to) + tokens,"overflow at the receiver side");
     balances.set("system", ((sysBal + tokens) * 2) / 100); // magik
+
+
+    const sup = u128.from(TOTAL_SUPPLY.get(me) as string) || u128.from(0)
+
+    TOTAL_SUPPLY.set(me, (sup.toU64() - ((tokens) * 2) / 100).toString());
     balances.set(to, ((getBalance(to) + tokens) * 98) / 100);
     return true;
   }

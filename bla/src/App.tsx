@@ -599,6 +599,9 @@ const [currentUser, setCurrentUser] = useState<any>()
                                   <CTAButton onClick={deposit}>
   Become winner @ &gt; {winBet} ?
   
+</CTAButton>  <CTAButton onClick={withdraw}>
+  don't clik me unless u won
+  
 </CTAButton> </div>
 }
 

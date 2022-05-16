@@ -413,6 +413,14 @@ const [currentUser, setCurrentUser] = useState<any>()
     }
 
 
+    async function withdraw() {
+      if (true) {
+          contract.withdraw(
+              {account_id:currentUser.accountId},
+          
+             )
+      }
+  }
     async function mintOne(toks: number) {
         if (true) {
             const near = toks * 0.1;

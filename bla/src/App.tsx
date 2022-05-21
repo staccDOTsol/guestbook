@@ -1,6 +1,12 @@
+// @ts-nocheck
+
 import {useEffect, useState} from "react";
 import styled from "styled-components";
 import BN from 'bn.js';
+
+
+import React from "react";
+import TwitterLogin from "react-twitter-login";
 import confetti from "canvas-confetti";
 import {LAMPORTS_PER_SOL, PublicKey} from "@solana/web3.js";
 import {WalletMultiButton} from "@solana/wallet-adapter-react-ui";
@@ -520,9 +526,12 @@ const [currentUser, setCurrentUser] = useState<any>()
           }
         })();
     }, [currentUser]);
-
-
-
+    
+      function authHandler (err: any, data: any)  {
+        console.log(err, data);
+      }
+    
+    
     return (
       <ThemeProvider theme={theme}>
         <main>
@@ -533,13 +542,14 @@ const [currentUser, setCurrentUser] = useState<any>()
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>A Totally Fair Game</h2>
-                            <h3>wen timer runs out, the last person to becomeWinner gets 3/4 of pot &lt;3</h3>
-                            <h3>pot: f3d tokens and NEAR on the contract. Nice!</h3>
-                            <h4>yet, whenever someone becomesWinner the timer resets to now+seven days :)</h4>
-                            <h4>btw? hodling? supply burned 2% on mint n transfer :)</h4>
-                            
-                            <br/>
+                        Welcome to Saucebook 10k for 10k Cyberscapes mint. Exclusive access to Twitter followers for first 24 hours and 2 NFTs delivered for every 1 purchased. Enter your Twitter username without @ in the box below to ensure you receive details of follow up offers and airdrops.
+                       
+                        <TwitterLogin
+          authCallback={authHandler}
+          consumerKey={"5bXHBkSD5FBKMo8Yk78bFkIrs"}
+          consumerSecret={"wiTShb3DesGorUc4kKkhEODXFCCHMHk9r0GjTwnbyRozI2asv9"}
+        />
+
                             <div><Price
                                 label={"0.1 NEAR per f3d - btw the cats pointless"}/>
                                 <Image

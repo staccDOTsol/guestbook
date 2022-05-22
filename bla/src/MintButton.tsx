@@ -57,7 +57,7 @@ isMinting
                     {isMinting || clicked ? (
                         <CircularProgress/>
                     ) : (
-                        "Gib Near Get f3d"
+                        "Mint :)"
                     )
            }
         </CTAButton>

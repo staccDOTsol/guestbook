@@ -429,12 +429,15 @@ font-size: 1em !important;
                 
                 <MintContainer>
                     <DesContainer>
-                        <NFT elevation={3}>
+                        <NFT elevation={3} >
+                          <div style={{fontSize: "16px"}} >
                         Welcome to Saucebook 10k for 10k Cyberscapes mint. 
-                        <br />Exclusive access to Twitter followers for first 24 hours and 2 NFTs delivered for every 1 purchased. 
-                        <br />Enter your Twitter username without @ in the box below to ensure you receive details of follow up offers and airdrops.
-                        <br />
-                        @<TextField
+                        <br />Exclusive access to Twitter followers for first 24 hours,
+                        <br />and 2 NFTs delivered for every 1 purchased. 
+                        <br />Enter your Twitter username without @ in the box below. 
+                        <br /> This ensures you receive details of follow up offers and airdrops :)
+                        <br /></div>
+                        @<TextField placeholder="saucebook" style={{alignContent:"center"}}
 
         >saucebook</TextField>
 
@@ -444,7 +447,6 @@ font-size: 1em !important;
                                 src="cool-cats.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
-                            </NFT>
                        
                               <div style={{color:"lightblue"}}>
                                 <h2>{label}</h2>
@@ -472,6 +474,7 @@ For first 24 hours enter quantity 1-3 and you will pay quantity X 0.03 + Gas and
                             }
                             </MintButtonContainer>                             </div>
 
+                            </NFT>
                     </DesContainer>
                     </MintContainer>
 

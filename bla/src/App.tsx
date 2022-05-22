@@ -456,7 +456,7 @@ catch (err){
     </div>
                             <br/>
                             
-                            <MintButtonContainer> <div>How many? (1-10)
+                            <MintButtonContainer> <div>How many? (1-2 in this box for 0.03-0.06 will yiled 2 or 4 SAUCE for the first 24hrs, after timer runs out then you can enter 1-4)
                             <TextField onChange={onBlarg}
 
                             >1</TextField> {true && 

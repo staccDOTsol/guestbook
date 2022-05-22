@@ -1,9 +1,9 @@
 {
-  "short_name": "Near FoMo3d",
-  "name": "Near FoMo3d",
+  "short_name": "MintSauce.art",
+  "name": "MintSauce.art",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "logo.jpg",
       "type": "image/png",
       "sizes": "358x358"
     }

@@ -3,5 +3,5 @@ export const ERC20ABI = [
     "function x() view returns (uint256)",
     "function twophase() view returns (uint256)",
     // Authenticated Functions
-    "function mintNFT(address recipient, string memory tokenURI, string memory maybeToken2, uint8 num) payable returns (uint256)",
+    "function mintNFT(address recipient, uint8 num) payable returns (uint256)",
 ];

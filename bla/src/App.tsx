@@ -458,7 +458,7 @@ font-size: 1em !important;
                               
 
                             Enter number you wish to mint. <br />
-For first 24 hours enter quantity 1-3 and you will pay quantity X 0.03 + Gas and have 2 X quantity delivered.
+For first 24 hours enter quantity 1-2 and you will pay quantity X 0.03 + Gas and have 2 X quantity delivered.
 <br />Once public mint starts delivery will be = quantity
 <br />
                             <TextField onChange={onBlarg}

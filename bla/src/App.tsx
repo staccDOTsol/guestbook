@@ -9,7 +9,7 @@ import {GatewayProvider} from '@civic/solana-gateway-react';
 import {Snackbar, Paper, LinearProgress, Chip} from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import {toDate, AlertState, getAtaForMint} from './utils';
-import {CTAButton, MintButton} from './MintButton';
+import {MintButton} from './MintButton';
 
 import 'regenerator-runtime/runtime';
 import PropTypes from 'prop-types';
@@ -401,25 +401,27 @@ console.log(err)
       }
     
     
+ const CTAButton2 = styled(Button)`
+display: block !important;
+margin: 0 auto !important;
+background-color: var(--title-text-color) !important;
+min-width: 120px !important;
+font-size: 1em !important;
+`;
     return (
       <ThemeProvider theme={theme}>
         <main>
          
   <div>
         {currentAccount  
-          ? <Button onClick={onClickDisconnect}>
+          ? <CTAButton2 onClick={onClickDisconnect}>
                 Account:{currentAccount}
-            </Button>
-          : <Button  onClick={onClickConnect}>
+            </CTAButton2>
+          : <CTAButton2  onClick={onClickConnect}>
                   Connect MetaMask
-              </Button>
+              </CTAButton2>
         }
-        {currentAccount  
-          ? <div>
-          <div>ETH Balance of current account: {balance}</div>
-          <div>Chain Info: ChainId {chainId} name {chainname}</div></div>
-        :<></>
-        }</div>
+        </div>
   
               
 
@@ -437,21 +439,20 @@ console.log(err)
         >saucebook</TextField>
 
                             <div><Price
-                                label={"0.03 ETH per unique 1/1 0-decimal SAUCE"}/>
+                                label={"0.03 ETH per unique 1/1 (from set of 10k)"}  ></Price> 
                                 <Image
                                 src="cool-cats.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             </NFT>
                        
-                              <div>
+                              <div style={{color:"lightblue"}}>
                                 <h2>{label}</h2>
         <div><b>Tis Saucey</b>: {addressContract}</div>
         <div><b></b>{totalSupply} / 10000 minted!</div>
-    </div>
                             <br/>
                             
-                            <MintButtonContainer> <div>
+                            <MintButtonContainer> 
                               
 
                             Enter number you wish to mint. <br />
@@ -460,7 +461,7 @@ For first 24 hours enter quantity 1-3 and you will pay quantity X 0.03 + Gas and
 <br />
                             <TextField onChange={onBlarg}
 
-                            >1</TextField> {currentAccount   && 
+                            >1</TextField> <br /> {currentAccount   && 
                            
                             // @ts-ignore
                                                 <MintButton
@@ -469,8 +470,8 @@ For first 24 hours enter quantity 1-3 and you will pay quantity X 0.03 + Gas and
                                                     onMint={startMint}
                                                 />
                             }
-                            </div>
-                            </MintButtonContainer> 
+                            </MintButtonContainer>                             </div>
+
                     </DesContainer>
                     </MintContainer>
 

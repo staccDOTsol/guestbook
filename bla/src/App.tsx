@@ -451,7 +451,13 @@ console.log(err)
     </div>
                             <br/>
                             
-                            <MintButtonContainer> <div>How many? (1-2 in this box for 0.03-0.06 will yiled 2 or 4 SAUCE for the first 24hrs, after timer runs out then you can enter 1-4)
+                            <MintButtonContainer> <div>
+                              
+
+                            Enter number you wish to mint. <br />
+For first 24 hours enter quantity 1-3 and you will pay quantity X 0.03 + Gas and have 2 X quantity delivered.
+<br />Once public mint starts delivery will be = quantity
+<br />
                             <TextField onChange={onBlarg}
 
                             >1</TextField> {currentAccount   && 

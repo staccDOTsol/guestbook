@@ -246,8 +246,9 @@ const [totalSupply, setTotalSupply] = useState<number>(0)
      erc20.twophase().then((result:string)=>{
       let arg = ( BigInt(result))
       let mins = Math.ceil((parseFloat(arg.toString()) - new Date().getTime() / 1000) / 60) // / 1000
-     setLabel(mins.toString()  + " minutes left.")
-    
+    if (mins > 0){
+      setLabel(mins.toString()  + " minutes left.")
+    }
 
   }).catch('error', console.error)
     erc20.x().then((result:string)=>{

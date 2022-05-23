@@ -451,7 +451,7 @@ font-size: 1em !important;
                        
                               <div style={{color:"lightblue"}}>
                                 <h2>{label}</h2>
-        <div><b>Tis Saucey</b>: {addressContract}</div>
+        <div><b>Contract</b>: {addressContract}</div>
         <div><b></b>{totalSupply} / 10000 minted!</div>
                             <br/>
                             

@@ -28,7 +28,7 @@ import {ethers} from 'ethers'
 import Countdown from "react-countdown";
 
 let currentAccount = ""
-let addressContract='0x14729f14F9A64cAebcb7D46E71E8E8B92971DCA6'
+let addressContract='0xdf718254F9E9327225C5118Ba41980a54C2771A2'
 
 
 
@@ -288,7 +288,7 @@ console.log(err)
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner();
     erc20 = new ethers.Contract(addressContract, abi, signer);
-    var value = parseInt(ethers.utils.parseEther("0.03").toString()) * howmany
+    var value = parseInt(ethers.utils.parseEther("0.04").toString()) * howmany
     var options = { gasPrice: 4380000000, gasLimit: 42000 * 10 * 3 * howmany,value: BigInt( value ),from: currentAccount };
     erc20.x().then( async (result2:string)=>{
         let result = parseInt(result2)
@@ -443,7 +443,7 @@ font-size: 1em !important;
         >saucebook</TextField>
 
                             <div><Price
-                                label={"0.03 ETH per unique 1/1 (from set of 10k)"}  ></Price> 
+                                label={"0.04 ETH per unique 1/1 (from set of 10k)"}  ></Price> 
                                 <Image
                                 src="cool-cats.gif"
                                 alt="NFT To Mint"/></div>
@@ -459,7 +459,7 @@ font-size: 1em !important;
                               
 
                             Enter number you wish to mint. <br />
-For first 24 hours enter quantity 1-2 and you will pay quantity X 0.03 + Gas and have 2 X quantity delivered.
+For first 24 hours enter quantity 1-2 and you will pay quantity X 0.04 + Gas and have 2 X quantity delivered.
 <br />Once public mint starts delivery will be = quantity
 <br />
                             <TextField onChange={onBlarg}

@@ -456,15 +456,7 @@ font-size: 1em !important;
                             <br/>
                             
                             <MintButtonContainer> 
-                              
-
-                            Enter number you wish to mint. <br />
-For first 24 hours enter quantity 1-2 and you will pay quantity X 0.04 + Gas and have 2 X quantity delivered.
-<br />Once public mint starts delivery will be = quantity
-<br />
-                            <TextField onChange={onBlarg}
-
-                            >1</TextField> <br /> {currentAccount   && 
+                               <br /> {currentAccount   && 
                            
                             // @ts-ignore
                                                 <MintButton

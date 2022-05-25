@@ -238,7 +238,7 @@ const App = (props: HomeProps) => {
 const [p2,setp2]= useState<string>("0")
 const [totalSupply, setTotalSupply] = useState<number>(0)
   useEffect( () => {
-    //if(!window.ethereum) return
+    if(!window.ethereum) return
 
      provider = new ethers.providers.Web3Provider(window.ethereum)
      const signer = provider.getSigner();
@@ -309,6 +309,7 @@ console.log(err)
     if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
     //client side code
     if(!window.ethereum) return
+   if (currentAccount){
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     provider.getBalance(currentAccount).then((result)=>{
       setBalance(ethers.utils.formatEther(result))
@@ -318,6 +319,7 @@ console.log(err)
       setChainName(result.name)
     })
     setCurrentAccount(currentAccount)
+  }
   },[currentAccount])
 
   const onClickConnect = () => {

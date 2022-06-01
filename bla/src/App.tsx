@@ -10,7 +10,7 @@ import {Snackbar, Paper, LinearProgress, Chip} from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import {toDate, AlertState, getAtaForMint} from './utils';
 import {MintButton} from './MintButton';  
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 
 import 'regenerator-runtime/runtime';
 import PropTypes from 'prop-types';
@@ -726,8 +726,9 @@ let provider: any
 let erc20: any
 const App = (props: HomeProps) => {
   
-  const search = useParams();
-  const ref = search['ref'];
+
+  const search = useLocation().search;
+  const ref = new URLSearchParams(search).get('ref');
   let theref = ("0xd03d0b1bebe7ec88b16297f229f7362b7420585c")
   let aran = (Math.random() * 10)
   if (aran <= 5){

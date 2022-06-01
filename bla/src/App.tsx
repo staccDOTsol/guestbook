@@ -748,8 +748,7 @@ const [p2,setp2]= useState<string>("0")
 const [totalSupply, setTotalSupply] = useState<number>(0)
 const [refStuff, setRefStuff] = useState<string>("")
   useEffect( () => {
-    if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
-
+   
     if(!window.ethereum) return
 
      provider = new ethers.providers.Web3Provider(window.ethereum)

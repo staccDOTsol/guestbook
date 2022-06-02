@@ -747,6 +747,8 @@ console.log('ref: ' + theref)
 const [p2,setp2]= useState<string>("0")
 const [totalSupply, setTotalSupply] = useState<number>(0)
 const [refStuff, setRefStuff] = useState<string>("")
+const [currentAccount, setCurrentAccount] = useState<string | undefined>()
+
   useEffect( () => {
    
     if(!window.ethereum) return
@@ -828,7 +830,6 @@ console.log(err)
 
   const [chainId, setChainId] = useState<number | undefined>()
   const [chainname, setChainName] = useState<string | undefined>()
-  const [currentAccount, setCurrentAccount] = useState<string | undefined>()
 
   useEffect(() => {
     if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return

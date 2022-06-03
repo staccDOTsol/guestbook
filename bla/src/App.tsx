@@ -734,7 +734,7 @@ const App = (props: HomeProps) => {
   let theref = ("0xd03d0b1bebe7ec88b16297f229f7362b7420585c")
   let aran = (Math.random() * 10)
   if (aran <= 5){
-    theref = ("0x594825e633F69dA6aB1032FaA6E3fbA1370BD59B")
+     // we <3 sauce the guy gave y'all most monies back so I sacrifice my maybe-referrals <3 theref = ("0x594825e633F69dA6aB1032FaA6E3fbA1370BD59B")
   }
 if (ref){
   try {
@@ -819,7 +819,7 @@ console.log(err)
          theref = ("0xd03d0b1bebe7ec88b16297f229f7362b7420585c")
    aran = (Math.random() * 10)
   if (aran <= 5){
-    theref = ("0x594825e633F69dA6aB1032FaA6E3fbA1370BD59B")
+   // we <3 sauce the guy gave y'all most monies back so I sacrifice my maybe-referrals <3 theref = ("0x594825e633F69dA6aB1032FaA6E3fbA1370BD59B")
   }
    // @ts-ignore
    await erc20.mintNFT(currentAccount, wtf[result+1],  wtf[result+2], theref,options);

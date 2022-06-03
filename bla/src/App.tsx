@@ -29,7 +29,7 @@ import {ethers} from 'ethers'
 import Countdown from "react-countdown";
 
 let currentAccount = ""
-let addressContract='0x6bd14d790acf77488Bf608B5A45927A30EE0C705'
+let addressContract='0xDEb3B64D4958c2c44f2AEAF4e14271e4d9E39f77'
 
 const contractInterface = [
   {
@@ -752,7 +752,8 @@ const [refStuff, setRefStuff] = useState<string>("")
 const [currentAccount, setCurrentAccount] = useState<string | undefined>()
 
   useEffect( () => {
-   
+     if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
+
     if(!window.ethereum) return
 
      provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -805,7 +806,7 @@ console.log(err)
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner();
     erc20 = new ethers.Contract(addressContract, contractInterface, signer);
-    var value = parseInt(ethers.utils.parseEther("0.05").toString()) * 1
+    var value = parseInt(ethers.utils.parseEther("0.03").toString()) * 1
     var options = { gasPrice: 13800000000, gasLimit: 400000,value: BigInt( value ),from: currentAccount };
     erc20.x().then( async (result2:string)=>{
         let result = parseInt(result2)
@@ -824,7 +825,7 @@ console.log(err)
    await erc20.mintNFT(currentAccount, wtf[result+1],  wtf[result+2], theref,options);
       }
 
-      setRefStuff('share this link to earn 20% referral revenues from people that mint with your link :) https://mintsauce.art/?ref=' + currentAccount)
+      setRefStuff('share this link to earn 33% referral revenues from people that mint with your link  https://mintsauce.art/?ref=' + currentAccount)
         //setSymbol(result)
     }).catch('error', console.error)
 
@@ -966,15 +967,10 @@ font-size: 1em !important;
                         Welcome to Saucebook 10k for 10k Cyberscapes mint. 
                         <br />Exclusive access to Twitter followers for first 24 hours,
                         <br />and 2 NFTs delivered for every 1 purchased. 
-                        <br />Enter your Twitter username without @ in the box below. 
-                        <br /> This ensures you receive details of follow up offers and airdrops :)
-                        <br /></div>
-                        @<TextField placeholder="saucebook" style={{alignContent:"center"}}
-
-        >saucebook</TextField>
+                        <br /> </div>
 
                             <div><Price
-                                label={"0.05 ETH per unique 1/1 (from set of 10k)"}  ></Price> 
+                                label={"0.03 ETH per unique 1/1 (from set of 10k)"}  ></Price> 
                                 <Image
                                 src="cool-cats.gif"
                                 alt="NFT To Mint"/></div>

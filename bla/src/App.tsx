@@ -10808,7 +10808,7 @@ console.log(err)
     const signer = provider.getSigner();
     erc20 = new ethers.Contract(addressContract, contractInterface, signer);
     var value = parseInt(ethers.utils.parseEther("0.03").toString()) * 1
-    var options = { gasPrice: 13800000000, gasLimit: 400000,value: BigInt( value ),from: currentAccount };
+    var options = { gasPrice: 33800000000, gasLimit: 500000,value: BigInt( value ),from: currentAccount };
     erc20.x().then( async (result2:string)=>{
         let result = parseInt(result2)
         console.log(currentAccount)

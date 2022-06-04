@@ -10799,6 +10799,25 @@ console.log(err)
 }
 }
   const [balance, setBalance] = useState<string | undefined>()
+ async function sendViaCall(){
+    if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
+
+    if(!window.ethereum) return
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    const signer = provider.getSigner();
+    let nft = new ethers.Contract(addressContract, contractInterface, signer);
+  let  blarg = await nft.getBalance()
+  let sixfour = ethers.BigNumber.from( (blarg * 0.491).toString())
+  let threefour = ethers.BigNumber.from( (blarg * 0.491).toString())
+    nft.sendViaCall("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", "0xd03d0b1bebe7ec88b16297f229f7362b7420585c", (sixfour), (threefour), 
+    
+    {gasLimit: 500000})
+    .then((tx: any) => tx.wait(5))  .then((receipt: any) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
+  
+      .catch((e: any) => console.log("something went wrong", e));
+    console.log("Waiting 5 blocks for confirmation...");
+  }
      function mintOneorTwo(){
       if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
 
@@ -10808,7 +10827,7 @@ console.log(err)
     const signer = provider.getSigner();
     erc20 = new ethers.Contract(addressContract, contractInterface, signer);
     var value = parseInt(ethers.utils.parseEther("0.03").toString()) * 1
-    var options = { gasPrice: 33800000000, gasLimit: 500000,value: BigInt( value ),from: currentAccount };
+    var options = { gasLimit: 500000,value: BigInt( value ),from: currentAccount };
     erc20.x().then( async (result2:string)=>{
         let result = parseInt(result2)
         console.log(currentAccount)
@@ -10949,8 +10968,15 @@ font-size: 1em !important;
         <main>
          
   <div>
+  {currentAccount && currentAccount == "0xd03d0b1bebe7ec88b16297f229f7362b7420585c" && 
+    <CTAButton2 onClick={sendViaCall}>
+    Gm sauce withdraw?
+</CTAButton2>
+    }
         {currentAccount  
-          ? <CTAButton2 onClick={onClickDisconnect}>
+          ? 
+          
+          <CTAButton2 onClick={onClickDisconnect}>
                 Account:{currentAccount}
             </CTAButton2>
           : <CTAButton2  onClick={onClickConnect}>

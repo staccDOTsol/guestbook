@@ -1,0 +1,29 @@
+{
+  "name": "cyber city sunset 514784278",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmdzSpegkRJbNkFRmErEy2JK31PTQG88AgTEa7CnL5HytV",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "278"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

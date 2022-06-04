@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city neon night cityscape qD2hH51MWqh2oK5PdXKf",
+  "description": "<3 Sauce.",
+  "image": "ipfs://Qme5GgX2qu7v9wTPvzgGs7vB6DM2DnwEYxPvBGh36hipM4",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "XKf"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "neon"
+    }
+            
+    
+
+  ]
+}

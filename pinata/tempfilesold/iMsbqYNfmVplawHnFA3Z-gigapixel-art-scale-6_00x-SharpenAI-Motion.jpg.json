@@ -1,0 +1,29 @@
+{
+  "name": "cyber city sunset iMsbqYNfmVplawHnFA3Z",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmaBEqrD7GHkS6RZ5oYfMJAso2YvwJfNJxGvvmL4aQXSgT",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "A3Z"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

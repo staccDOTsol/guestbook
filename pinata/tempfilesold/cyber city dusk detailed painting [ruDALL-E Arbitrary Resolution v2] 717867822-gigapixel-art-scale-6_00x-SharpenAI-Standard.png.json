@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dusk 717867822",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmZ3KdT5uaJCstR8miNy5a2AJUgZWZHeah1ksAZaoSfhPk",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dusk"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "822"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

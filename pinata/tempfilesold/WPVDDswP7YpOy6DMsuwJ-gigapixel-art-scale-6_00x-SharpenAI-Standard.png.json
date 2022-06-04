@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dusk WPVDDswP7YpOy6DMsuwJ",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmY7YhHMYySMgLjDPL31YTKYY2nPdFtPYeZ5T7mgeZyZmB",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dusk"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "uwJ"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

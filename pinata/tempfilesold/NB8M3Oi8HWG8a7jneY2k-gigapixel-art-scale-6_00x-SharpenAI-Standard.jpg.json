@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city red light NB8M3Oi8HWG8a7jneY2k",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmdPXRBL9XMDWCKco1BinRVtNL6KG5aw41QfDS48J7Gv6T",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "none"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "Y2k"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "red"
+    }
+            
+    
+
+  ]
+}

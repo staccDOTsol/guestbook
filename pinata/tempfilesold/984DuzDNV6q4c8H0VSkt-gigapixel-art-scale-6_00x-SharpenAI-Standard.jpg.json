@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city green light 984DuzDNV6q4c8H0VSkt",
+  "description": "<3 Sauce.",
+  "image": "ipfs://Qme4iHHLWLWYaj82vnkZ8a6MMTzcfG8u5C7E81X2pyipMv",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "none"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "Skt"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "green"
+    }
+            
+    
+
+  ]
+}

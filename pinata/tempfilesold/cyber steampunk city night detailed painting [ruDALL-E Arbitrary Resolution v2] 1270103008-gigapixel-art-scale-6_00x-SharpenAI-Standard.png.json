@@ -1,0 +1,29 @@
+{
+  "name": "cyber steampunk city night 1270103008",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmQqGnWi7xTAs9P29rAUNsLGvnTeVz3A8Q73a3CYFmK8XU",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "steampunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "008"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "cybepunk city day 1028326607",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmSSS8kBe7PFB5yiJR9o8Hx5ispumzQZwXcZX7T57MpuwS",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cybepunk"
+    },{
+      "trait_type": "Time",
+      "value": "day"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "607"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

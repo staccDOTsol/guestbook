@@ -1,0 +1,29 @@
+{
+  "name": "cyber steampunk city sunset RzLSjAZrUu72zj10UWMt",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmRpZzfw4HngjSk67SfpKbZa6BiPZ3T1UXJCkuJdjZ8M1x",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "steampunk"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "WMt"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

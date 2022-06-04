@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dawn WLklTEYa0OI5u1JL9IlL",
+  "description": "<3 Sauce.",
+  "image": "ipfs://Qmcydi1PT5DVBVWoRa54W22b4pKywYeLZBGYnMYqpxcz6J",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "IlL"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

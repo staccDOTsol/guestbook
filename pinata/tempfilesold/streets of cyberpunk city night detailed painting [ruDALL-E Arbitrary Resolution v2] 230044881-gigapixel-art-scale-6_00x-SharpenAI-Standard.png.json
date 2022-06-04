@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city night 230044881",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmaV5K3uF4FwR7nP8RQy3hGhx5vsGHFaAJ8FD2L8CAhwfr",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "881"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

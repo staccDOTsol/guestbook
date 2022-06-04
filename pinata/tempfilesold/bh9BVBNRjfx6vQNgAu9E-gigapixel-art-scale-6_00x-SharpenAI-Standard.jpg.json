@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city purple light bh9BVBNRjfx6vQNgAu9E",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmP3wKLH1Qi7FEtVQ1Y6dU6BfUeupoW8bZ6wRRLiTYxqsh",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "none"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "u9E"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "purple"
+    }
+            
+    
+
+  ]
+}

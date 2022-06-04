@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dawn 1715017478",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmckPrSLSXjqAMYr5Bqppk2NgiYRN1WWj3P16A1ufozSsL",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "478"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

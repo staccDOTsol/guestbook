@@ -1,0 +1,29 @@
+{
+  "name": "cybepunk city night 1569174615",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmZ8n9G9NgDe6bjthESuZX8to882AN6uVze4j4W1AjzNMX",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cybepunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "615"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

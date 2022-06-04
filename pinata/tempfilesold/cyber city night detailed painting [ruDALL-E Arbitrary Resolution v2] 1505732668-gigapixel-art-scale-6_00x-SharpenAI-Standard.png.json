@@ -1,0 +1,29 @@
+{
+  "name": "cyber city night 1505732668",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmSGLxLQTb7MBVMGBfZewqagpDNwXrsdF6KYuiRJ563A3m",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "668"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

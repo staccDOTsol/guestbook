@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city panorama sunset 594050971",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmQW8PzqHH477YGbQ1Yro6v2BmMtBW7SukXKT7LisynWdB",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "971"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "panorama"
+    }
+            
+    
+
+  ]
+}

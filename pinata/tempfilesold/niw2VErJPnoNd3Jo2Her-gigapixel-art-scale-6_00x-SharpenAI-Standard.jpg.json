@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city at dusk niw2VErJPnoNd3Jo2Her",
+  "description": "<3 Sauce.",
+  "image": "ipfs://Qme6zEmmJEsHD2BX4cnbmZkCHk6zUjqjfg1VmZYMR25r8F",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "dusk"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "Her"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

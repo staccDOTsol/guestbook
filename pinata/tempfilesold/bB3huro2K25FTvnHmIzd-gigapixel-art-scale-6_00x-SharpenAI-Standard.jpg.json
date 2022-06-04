@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city at sunset bB3huro2K25FTvnHmIzd",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmVzea3nDVT6o8PMn3w1MCao7DobfQMdNggCL4Cxna6wK4",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "Izd"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

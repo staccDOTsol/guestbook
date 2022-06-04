@@ -1,0 +1,29 @@
+{
+  "name": "cyber steampunk city at dawn bzsFkdqScWh0c22sY0T8",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmZZRi3eqHnESb4RAoBdr1pALqX2x4Z8nrmn6DWKXcXEQr",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "steampunk"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "0T8"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

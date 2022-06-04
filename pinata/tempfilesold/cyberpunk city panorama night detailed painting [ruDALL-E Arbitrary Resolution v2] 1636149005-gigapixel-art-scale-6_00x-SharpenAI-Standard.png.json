@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city panorama night 1636149005",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmfTGjMAcNzeyXeQ3L8bf8q2WAYvBg35WvjvwU8dmmJLxw",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "005"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "panorama"
+    }
+            
+    
+
+  ]
+}

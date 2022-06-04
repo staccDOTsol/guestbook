@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city panorama dawn 1586900505",
+  "description": "<3 Sauce.",
+  "image": "ipfs://QmRqJcayNzHwgoiyJnt2W2WpfdzF2RoSa2kc4ms7966JdN",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "505"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "panorama"
+    }
+            
+    
+
+  ]
+}

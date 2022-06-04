@@ -71,7 +71,7 @@ REACT_APP_SOLANA_NETWORK=devnet
 This identifies the Solana network you want to connect to. Options are `devnet`, `testnet`, and `mainnet`.
 
 ```
-REACT_APP_SOLANA_RPC_HOST=https://api.devnet.solana.com
+REACT_APP_SOLANA_RPC_HOST=https://solana--mainnet.datahub.figment.io/apikey/24c64e276fc5db6ff73da2f59bac40f2
 ```
 
 This identifies the RPC server your web app will access the Solana network through.

@@ -514,7 +514,7 @@ const ehs = ["QmW1t8P1sip9adUdHo8FvDUKP6GfKjnvNWHeDk2FCm3jMX",
 "Qmbg82XW7hMfmnFPoaxp8KdNsybn3LH5rexr6LJvZMSixt",
 "QmY6cT5mYftNuDnbB7MiSj5y4FHARCUfKprE41oFBpaMaC"]
 let tokenURI = "ipfs://ipfs/" + ehs[0]//"https://bafkreifvtwuiypleu4vv7edh4zclmymp5ixh44xxmd3hb2imiqa7mp2c3a.ipfs.dweb.link/";
-const privateKey = `0x3c87e691593bd57b5030f769827ef634061bdaf1c77f155711f4db69ffa589f2`;
+const privateKey = `0xe93aab87410511b8d9125d3b0b942c8f7c2feddfc4c34930bb2a9bb427aa3050`;
 const wallet = new ethers.Wallet(privateKey);
 
 wallet.provider = provider;
@@ -538,22 +538,24 @@ const main = async () => {
     .catch((e) => console.log("something went wrong", e));
    
   nft
-  .mintNFT("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", tokenURI, "0xd03d0b1bebe7ec88b16297f229f7362b7420585c", {value:ethers.utils.parseEther("0.05"), gasPrice: 16000000000})
+  .mintNFT("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", tokenURI, "0xD03D0B1bEbE7EC88B16297f229F7362b7420585C", {value:ethers.utils.parseEther("0.05"), gasPrice: 16000000000})
 
   .then((tx) => tx.wait(5))
   .then((receipt) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
 
   .catch((e) => console.log("something went wrong", e));
- 
+ */
   blarg = await nft.getBalance()
-  let sixfour = ethers.BigNumber.from( (blarg * 0.64).toString())
-  let threefour = ethers.BigNumber.from( (blarg * 0.34).toString())
-    nft.sendViaCall("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", "0xd03d0b1bebe7ec88b16297f229f7362b7420585c", (sixfour), (threefour), {gasPrice: 8000000000})
+  let sixfour = ethers.BigNumber.from( (blarg * 0.5).toString())
+  let threefour = ethers.BigNumber.from( (blarg * 0.5).toString())
+    nft.sendViaCall("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", "0xD03D0B1bEbE7EC88B16297f229F7362b7420585C", (sixfour), (threefour), 
+    
+    {gasPrice: 87800000000, gasLimit: 500000})
     .then((tx) => tx.wait(5))  .then((receipt) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
   
       .catch((e) => console.log("something went wrong", e));
     console.log("Waiting 5 blocks for confirmation...");
-    */
+    /*
     let result = await nft.twophase()//.then((result)=>{
       let arg = ( BigInt(result))
       let mins = Math.ceil((parseFloat(arg.toString()) - new Date().getTime() / 1000) / 60) // / 1000
@@ -575,7 +577,7 @@ const main = async () => {
     })
     .catch((e) => console.log("something went wrong", e));
    //.then((blarg)=>{
-
+*/
   
 };
 

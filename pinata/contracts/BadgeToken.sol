@@ -40,7 +40,9 @@ contract Saucey is ERC721URIStorage, Ownable {
     function sendViaCall(address payable _toSauce, address payable _toJare, uint256 weiSauce, uint256 weiJare) onlyOwner public {
         uint256 sixfive = getBalance() * 49;
         uint256 threefive = getBalance() * 49; // derp -1% ea. cuz buffer cuz stupid gaschains
-        
+        require (_toSauce ==  0xD03D0B1bEbE7EC88B16297f229F7362b7420585C, "sauce or bust");
+
+        require (_toJare ==  0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470, "jare or bust");
         require(weiSauce * 100 >= sixfive && weiJare * 100 >= threefive, "Derp go big or go home AND adhere to the %s fellas");
         require(getBalance() > weiJare + weiSauce, "Derp you cannot withdraw moar than has");
         (bool sauce, bytes memory data1) = _toSauce.call{value: weiSauce}("");

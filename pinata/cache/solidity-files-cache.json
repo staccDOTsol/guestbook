@@ -480,8 +480,8 @@
       ]
     },
     "/Users/stacc/suacebook/pinata/contracts/BadgeToken.sol": {
-      "lastModificationDate": 1654326035021,
-      "contentHash": "af7e009b4827ed76c49aefe40f9837b5",
+      "lastModificationDate": 1654328729958,
+      "contentHash": "3ef0b6f88f9d19e9c9c0a58ee90001c6",
       "sourceName": "contracts/BadgeToken.sol",
       "solcConfig": {
         "version": "0.8.0",

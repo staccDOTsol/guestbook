@@ -522,7 +522,7 @@ const signer = wallet.connect(provider);
 
 // https://docs.ethers.io/v5/api/contract/contract
 const nft = new ethers.Contract(
-  "0x4776E7656d863c07BD7E523e911D8e292e08902d",
+  "0x30d806b1bc9871eE93A5afb9524cc35Ca2df1b36",
   contractInterface,
   signer
 );

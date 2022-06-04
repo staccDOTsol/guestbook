@@ -29,7 +29,7 @@ import {ethers} from 'ethers'
 import Countdown from "react-countdown";
 
 let currentAccount = ""
-let addressContract='0x4776E7656d863c07BD7E523e911D8e292e08902d'
+let addressContract='0x30d806b1bc9871eE93A5afb9524cc35Ca2df1b36'
 
 const contractInterface = [
     {

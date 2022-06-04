@@ -13,7 +13,7 @@ contract Saucey is ERC721URIStorage, Ownable {
 
     Counters.Counter private _tokenIds;
     uint256 endts;
-    constructor() ERC721("Saucey", "SAUCE") {
+    constructor() ERC721("Cyberscapes", "SAUCE") {
         endts = block.timestamp + 86400;
     }
     function twophase() 

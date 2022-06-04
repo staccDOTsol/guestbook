@@ -1,0 +1,29 @@
+{
+  "name": "view from the balcony over vast cyberpunk city below 269339296",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmUoiAemS4NAdo87tXZ7UBzf4gu9sibn4MP2FvBABbzj6S",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "none"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "296"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

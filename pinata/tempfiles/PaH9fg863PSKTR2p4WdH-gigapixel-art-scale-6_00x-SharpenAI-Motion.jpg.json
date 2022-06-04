@@ -1,0 +1,29 @@
+{
+  "name": "cyber city panorama night PaH9fg863PSKTR2p4WdH",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmVBny9VBvmNQgJY129gVu6kaTg7fxWFd3H669HfdZ4rTh",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "WdH"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "panorama"
+    }
+            
+    
+
+  ]
+}

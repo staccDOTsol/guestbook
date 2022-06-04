@@ -1,0 +1,29 @@
+{
+  "name": "cybepunk city night 976762851",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmejfVY7BiUviygQeCuYf3ku8cxXeLT6KLjHj2nm1fMyCX",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cybepunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "851"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

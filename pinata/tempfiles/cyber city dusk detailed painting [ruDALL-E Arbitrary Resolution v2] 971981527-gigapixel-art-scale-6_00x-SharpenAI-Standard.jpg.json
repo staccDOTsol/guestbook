@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dusk 971981527",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://Qmam4JSV96onsPbKw5Xs7s1oze1V2qXWZHX7m99HXU5G5x",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dusk"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "527"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

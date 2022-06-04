@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city purple light U5zEpaVopRQjkufonFw8",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmW3Pa9XYF4jipNHyGnh7s9rm9QeBB6SXZKuGEGT7YzMT7",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "none"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "Fw8"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "purple"
+    }
+            
+    
+
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "cybepunk city night 1398113332",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmPt2E61NM2kPupzomtw6n7g2a4cdfn3tATgcj7m2EC4to",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cybepunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "332"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

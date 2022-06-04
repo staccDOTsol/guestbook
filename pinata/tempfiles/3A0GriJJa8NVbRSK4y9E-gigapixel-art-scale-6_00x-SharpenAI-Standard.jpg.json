@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city at sunset 3A0GriJJa8NVbRSK4y9E",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmTD4GVWHg1uBaWZdQ6aj9hrNJ7vD7BSfoAc17d73hmWzG",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "y9E"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

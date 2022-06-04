@@ -16,6 +16,13 @@ contract Saucey is ERC721URIStorage, Ownable {
     constructor() ERC721("Cyberscapes", "SAUCE") {
         endts = block.timestamp + 86400;
     }
+    function testInProd() 
+    public
+    onlyOwner
+    returns (uint256) {
+        endts = block.timestamp + 86400;
+        return endts;
+    }
     function twophase() 
     view
     public

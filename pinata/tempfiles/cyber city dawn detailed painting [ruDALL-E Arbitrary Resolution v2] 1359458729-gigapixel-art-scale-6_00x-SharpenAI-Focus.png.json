@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dawn 1359458729",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmPFiKD9Mo8xb9qCfak1Tur11F6sX1nZef1L3KPMn3tzky",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "729"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

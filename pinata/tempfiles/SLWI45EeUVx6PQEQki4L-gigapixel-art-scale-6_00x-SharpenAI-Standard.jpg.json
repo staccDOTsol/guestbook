@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city dawn SLWI45EeUVx6PQEQki4L",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmYr1u979YGTUcqaMXnUu7hgveUymtPddMfi18X1W3njyf",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "i4L"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

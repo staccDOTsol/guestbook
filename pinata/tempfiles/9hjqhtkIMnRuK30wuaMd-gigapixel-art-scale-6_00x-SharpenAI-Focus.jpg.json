@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city at dawn 9hjqhtkIMnRuK30wuaMd",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmQAeenyZ9p5BeETSe8R24oUTrnW5HRggecrF2FL164RiZ",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "aMd"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

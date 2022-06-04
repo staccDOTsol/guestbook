@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city red light CLeyFdpRATX3Py4UJsID",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmUwdQjJwaK69H6CJLRLH46mjgHGu7fgRfg46uVxc6ZSmH",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "none"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "sID"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "red"
+    }
+            
+    
+
+  ]
+}

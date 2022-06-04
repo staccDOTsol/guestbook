@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city neon night cityscape ugp5XD3iBBupFQ0fpv5M",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmXQWRm43aiWTRCArp5zp1YqQVhNriWgDJLLCTq4JFxu2j",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "v5M"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "neon"
+    }
+            
+    
+
+  ]
+}

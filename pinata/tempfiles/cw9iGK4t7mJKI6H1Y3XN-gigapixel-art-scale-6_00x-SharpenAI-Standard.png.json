@@ -1,0 +1,29 @@
+{
+  "name": "cyber city sunset cw9iGK4t7mJKI6H1Y3XN",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmRF8JxL2HW8QTg6W1Ft3oEGL8JNxEHfYLY1yiYPaZY45E",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "3XN"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

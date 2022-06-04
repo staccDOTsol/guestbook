@@ -1,0 +1,29 @@
+{
+  "name": "cybepunk city day 1557237950",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmRhp4emYByx4Bm3sMzZrgEWkECcFEXLJiYSUjGKtpdhJF",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cybepunk"
+    },{
+      "trait_type": "Time",
+      "value": "day"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "950"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

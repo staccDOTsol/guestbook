@@ -1,0 +1,29 @@
+{
+  "name": "cyber steampunk city at dawn Ag665s4p4Qh3RIeb8uqG",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmaSVJVUvkfjvaEaxkG3FtbJSAQW9rHsxnFe5YF29t9Jpa",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "steampunk"
+    },{
+      "trait_type": "Time",
+      "value": "dawn"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "uqG"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

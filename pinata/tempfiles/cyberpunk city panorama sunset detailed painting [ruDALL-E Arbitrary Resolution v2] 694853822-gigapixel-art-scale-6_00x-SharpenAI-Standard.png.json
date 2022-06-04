@@ -1,0 +1,29 @@
+{
+  "name": "cyberpunk city panorama sunset 694853822",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmNo2YHowbnUniz2AQEoaCkfT3hthW2aRm2LGDuXWrJq5s",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "sunset"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "822"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "panorama"
+    }
+            
+    
+
+  ]
+}

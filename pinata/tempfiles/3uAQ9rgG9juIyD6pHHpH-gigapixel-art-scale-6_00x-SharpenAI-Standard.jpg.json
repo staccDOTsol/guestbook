@@ -1,0 +1,29 @@
+{
+  "name": "streets of cyberpunk city at night 3uAQ9rgG9juIyD6pHHpH",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://QmVh8dkjcNY6dowgae1xZQLgAoFK3hEgKDN4Vziuvkxopj",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyberpunk"
+    },{
+      "trait_type": "Time",
+      "value": "night"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "HpH"
+    },{
+      "trait_type": "Platform",
+      "value": "Nightcafe"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

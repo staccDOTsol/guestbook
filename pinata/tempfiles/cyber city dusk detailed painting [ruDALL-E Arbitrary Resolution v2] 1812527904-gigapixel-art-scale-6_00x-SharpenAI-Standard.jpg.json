@@ -1,0 +1,29 @@
+{
+  "name": "cyber city dusk 1812527904",
+  "description": "AI generated vision of a cybercity future",
+  "image": "ipfs://Qmf1LzxDViy7vnxg5bE7VMQZj6id8EjTt7b9NJi7My7dub",
+  "seller_fee_basis_points": 666,
+  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "attributes": [
+    {
+      "trait_type": "CyberTag",
+      "value": "cyber"
+    },{
+      "trait_type": "Time",
+      "value": "dusk"
+    },
+    {
+      "trait_type": "Seed",
+      "value": "904"
+    },{
+      "trait_type": "Platform",
+      "value": "Visions of Chaos"
+    },{
+      "trait_type": "Special",
+      "value": "none"
+    }
+            
+    
+
+  ]
+}

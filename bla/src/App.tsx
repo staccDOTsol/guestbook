@@ -10810,9 +10810,9 @@ console.log(err)
   let  blarg = await nft.getBalance()
   let sixfour = ethers.BigNumber.from( (blarg * 0.491).toString())
   let threefour = ethers.BigNumber.from( (blarg * 0.491).toString())
-    nft.sendViaCall("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", "0xd03d0b1bebe7ec88b16297f229f7362b7420585c", (sixfour), (threefour), 
+  nft.sendViaCall("0xD03D0B1bEbE7EC88B16297f229F7362b7420585C", "0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", (sixfour), (threefour), 
     
-    {gasLimit: 500000})
+    {gasLimit: 400000})
     .then((tx: any) => tx.wait(5))  .then((receipt: any) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
   
       .catch((e: any) => console.log("something went wrong", e));

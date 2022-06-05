@@ -10808,8 +10808,8 @@ console.log(err)
     const signer = provider.getSigner();
     let nft = new ethers.Contract(addressContract, contractInterface, signer);
   let  blarg = await nft.getBalance()
-  let sixfour = ethers.BigNumber.from( (blarg * 0.5).toString())
-  let threefour = ethers.BigNumber.from( (blarg * 0.5).toString())
+  let sixfour = ethers.BigNumber.from( (blarg * 0.495).toString())
+  let threefour = ethers.BigNumber.from( (blarg * 0.495).toString())
   nft.sendViaCall("0xD03D0B1bEbE7EC88B16297f229F7362b7420585C", "0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", (sixfour), (threefour), 
     
     {gasLimit: 400000})

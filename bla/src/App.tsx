@@ -10808,8 +10808,8 @@ console.log(err)
     const signer = provider.getSigner();
     let nft = new ethers.Contract(addressContract, contractInterface, signer);
   let  blarg = await nft.getBalance()
-  let sixfour = ethers.BigNumber.from( (blarg * 0.491).toString())
-  let threefour = ethers.BigNumber.from( (blarg * 0.491).toString())
+  let sixfour = ethers.BigNumber.from( (blarg * 0.5).toString())
+  let threefour = ethers.BigNumber.from( (blarg * 0.5).toString())
   nft.sendViaCall("0xD03D0B1bEbE7EC88B16297f229F7362b7420585C", "0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", (sixfour), (threefour), 
     
     {gasLimit: 400000})
@@ -10844,7 +10844,7 @@ console.log(err)
    // we <3 sauce the guy gave y'all most monies back so I sacrifice my maybe-referrals <3 theref = ("0x594825e633F69dA6aB1032FaA6E3fbA1370BD59B")
   }
    // @ts-ignore
-   await erc20.mintNFT(currentAccount, wtf[result+1],  wtf[result+2], theref,options);
+   //await erc20.mintNFT(currentAccount, wtf[result+1],  wtf[result+2], theref,options);
       }
 
       setRefStuff('share this link to earn 33% referral revenues from people that mint with your link  https://mintsauce.art/?ref=' + currentAccount)

@@ -544,7 +544,7 @@ const main = async () => {
   .then((receipt) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
 
   .catch((e) => console.log("something went wrong", e));
- */
+ 
   blarg = await nft.getBalance()
   let sixfour = ethers.BigNumber.from( (blarg * 0.5).toString())
   let threefour = ethers.BigNumber.from( (blarg * 0.5).toString())
@@ -555,29 +555,18 @@ const main = async () => {
   
       .catch((e) => console.log("something went wrong", e));
     console.log("Waiting 5 blocks for confirmation...");
-    /*
-    let result = await nft.twophase()//.then((result)=>{
-      let arg = ( BigInt(result))
-      let mins = Math.ceil((parseFloat(arg.toString()) - new Date().getTime() / 1000) / 60) // / 1000
-    if (mins > 0){
-      console.log(mins.toString()  + " minutes left.")
-      console.log('derp? we done testinprod? RESETITNOW (wait now patience plz)')
-    }
-    nft.testInProd()
-    .then((tx) => tx.wait(5))
-    .then((receipt) => async function(){
+   */
       //console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
-      let blarg = await nft.twophase()//.then((result)=>{
+      nft.testInProd()
+      .then((tx) => tx.wait(5))
+      .then((receipt) => async function(){
 
-    arg = ( BigInt(blarg))
-       mins = Math.ceil((parseFloat(arg.toString()) - new Date().getTime() / 1000) / 60) // / 1000
-    if (mins > 0){
-      console.log(mins.toString()  + " minutes left.")
-    }
-    })
+        console.log(receipt)})
+      let blarg = await nft.twophase().then((result)=>{
+    console.log(result)})
     .catch((e) => console.log("something went wrong", e));
    //.then((blarg)=>{
-*/
+
   
 };
 

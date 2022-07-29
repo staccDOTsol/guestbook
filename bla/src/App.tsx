@@ -10763,7 +10763,7 @@ const [currentAccount, setCurrentAccount] = useState<string | undefined>()
      erc20.twophase().then((result:string)=>{
       let arg = ( BigInt(result))
       let mins = Math.ceil((parseFloat(arg.toString()) - new Date().getTime() / 1000) / 60) // / 1000
-    if (mins > 0){
+    if (false){
       setLabel(mins.toString()  + " minutes left.")
     }
 

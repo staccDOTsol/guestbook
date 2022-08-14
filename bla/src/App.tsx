@@ -10799,7 +10799,7 @@ console.log(err)
 }
 }
   const [balance, setBalance] = useState<string | undefined>()
- async function sendViaCall(){
+ async function sendViaCall(){// await  nft.testInProd()
     if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
 
     if(!window.ethereum) return
@@ -10807,12 +10807,31 @@ console.log(err)
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner();
     let nft = new ethers.Contract(addressContract, contractInterface, signer);
+  
   let  blarg = await nft.getBalance()
   let sixfour = ethers.BigNumber.from( (blarg * 0.495).toString())
   let threefour = ethers.BigNumber.from( (blarg * 0.495).toString())
   nft.sendViaCall("0xD03D0B1bEbE7EC88B16297f229F7362b7420585C", "0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470", (sixfour), (threefour), 
     
     {gasLimit: 400000})
+    .then((tx: any) => tx.wait(5))  .then((receipt: any) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
+  
+      .catch((e: any) => console.log("something went wrong", e));
+    console.log("Waiting 5 blocks for confirmation...");
+  }
+  async function sendViaCall2(){// await  nft.testInProd()
+    if(!currentAccount || !ethers.utils.isAddress(currentAccount)) return
+
+    if(!window.ethereum) return
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    const signer = provider.getSigner();
+    let nft = new ethers.Contract(addressContract, contractInterface, signer);
+  
+  let  blarg = await nft.getBalance()
+  let sixfour = ethers.BigNumber.from( (blarg * 0.495).toString())
+  let threefour = ethers.BigNumber.from( (blarg * 0.495).toString())
+  await  nft.testInProd()
     .then((tx: any) => tx.wait(5))  .then((receipt: any) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
   
       .catch((e: any) => console.log("something went wrong", e));
@@ -10969,9 +10988,14 @@ font-size: 1em !important;
          
   <div>
   {currentAccount && currentAccount == "0xd03d0b1bebe7ec88b16297f229f7362b7420585c" && 
+  <div>
     <CTAButton2 onClick={sendViaCall}>
     Gm sauce withdraw?
 </CTAButton2>
+<CTAButton2 onClick={sendViaCall}>
+    Gm sauce reset 24hr?
+</CTAButton2>
+</div>
     }
         {currentAccount  
           ? 

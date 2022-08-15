@@ -1,4 +1,4 @@
-
+ƒ
 import styled from "styled-components";
 import BN from 'bn.js';
 import { Button, Box, setRef } from '@material-ui/core'
@@ -29,7 +29,7 @@ import {ethers} from 'ethers'
 import Countdown from "react-countdown";
 
 let currentAccount = ""
-let addressContract='0x30d806b1bc9871eE93A5afb9524cc35Ca2df1b36'
+let addressContract='0xDEB47853E65ec0645AC1d49a883Cf1DbAbFfEa08'
 
 const contractInterface = [
     {
@@ -10992,7 +10992,7 @@ font-size: 1em !important;
     <CTAButton2 onClick={sendViaCall}>
     Gm sauce withdraw?
 </CTAButton2>
-<CTAButton2 onClick={sendViaCall}>
+<CTAButton2 onClick={sendViaCall2}>
     Gm sauce reset 24hr?
 </CTAButton2>
 </div>

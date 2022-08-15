@@ -10828,9 +10828,6 @@ console.log(err)
     const signer = provider.getSigner();
     let nft = new ethers.Contract(addressContract, contractInterface, signer);
   
-  let  blarg = await nft.getBalance()
-  let sixfour = ethers.BigNumber.from( (blarg * 0.495).toString())
-  let threefour = ethers.BigNumber.from( (blarg * 0.495).toString())
   await  nft.testInProd()
     .then((tx: any) => tx.wait(5))  .then((receipt: any) => console.log(`Your transaction is confirmed, its receipt is: ${receipt.transactionHash}`))
   

@@ -1,4 +1,4 @@
-ƒ
+
 import styled from "styled-components";
 import BN from 'bn.js';
 import { Button, Box, setRef } from '@material-ui/core'

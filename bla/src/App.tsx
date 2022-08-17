@@ -11,6 +11,9 @@ import Alert from "@material-ui/lab/Alert";
 import {toDate, AlertState, getAtaForMint} from './utils';
 import {MintButton} from './MintButton';  
 import {useLocation, useParams} from "react-router-dom";
+import "./styles.css";
+import YoutubeEmbed from "./embed";
+
 
 import 'regenerator-runtime/runtime';
 import PropTypes from 'prop-types';
@@ -10916,10 +10919,8 @@ font-size: 1em !important;
                         <br />every so often the artist/dev allows 
                         <br /> 2 NFTs delivered for every 1 purchased. 
                         <br /> </div>
-
-                            <div><Price
-                                label={"Play This Video"} ></Price> 
-                               <video width="33%" src="/gamesauce.mp4" autoPlay={false} controls={true} /> <br /><Price
+                            <div>
+                             <iframe src="https://streamable.com/e/r1y8y9"  frameBorder={0} width="100%" height="100%"  allowFullScreen={true}></iframe><br /><Price
                                 label={(thePrice / 10 ** 18).toString() + " ETH per unique 1/1 "}  ></Price> 
                                 <Image
                                 src="cool-cats.gif"

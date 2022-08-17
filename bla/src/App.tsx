@@ -306,7 +306,6 @@ font-size: 1em !important;
                             <Button onClick={opensea} >https://opensea.io/collection/cyberscapes</Button>
                               <div style={{color:"lightblue"}}>
                                 <h2>{label}</h2>
-        <div><b>Contract</b>: 0x30d806b1bc9871eE93A5afb9524cc35Ca2df1b36</div>
         <div><b></b>only 212 minted...</div>
                             <br/>
                             </div>

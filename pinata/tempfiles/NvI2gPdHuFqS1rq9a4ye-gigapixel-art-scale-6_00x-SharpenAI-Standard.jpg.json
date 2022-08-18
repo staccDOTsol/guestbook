@@ -3,7 +3,7 @@
   "description": "AI generated vision of a cybercity future",
   "image": "ipfs://QmQZcTRY2GRP2kJtebCoS2yMdzsS6keHEk4j6mgjw2YmST",
   "seller_fee_basis_points": 666,
-  "fee_recipient": "0xd03d0b1bebe7ec88b16297f229f7362b7420585c",
+  "fee_recipient": "0x687826fB27Ff806dC996A20CE49E305F1Bcd24Ff",
   "attributes": [
     {
       "trait_type": "CyberTag",

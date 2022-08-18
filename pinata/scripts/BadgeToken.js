@@ -1,16 +1,16 @@
- // scripts/Saucey.js
+ // scripts/StaccStaccs.js
 
 const hre = require("hardhat");
 
 async function main() {
 
-  const Saucey = await hre.ethers.getContractFactory("Saucey");
-  console.log('Deploying Saucey ERC721 token...');
-  const token = await Saucey.deploy();
+  const StaccStaccs = await hre.ethers.getContractFactory("StaccStaccs");
+  console.log('Deploying StaccStaccs ERC721 token...');
+  const token = await StaccStaccs.deploy();
 
   await token.deployed();
- // await Saucey.mintNft("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470","ipfs://ipfs/QmexPSS1j67i5ysSzMT6j89DgH64baMgtacUB5KrysCnfi")
-  console.log("Saucey deployed to:", token.address);
+ // await StaccStaccs.mintNft("0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470","ipfs://ipfs/QmexPSS1j67i5ysSzMT6j89DgH64baMgtacUB5KrysCnfi")
+  console.log("StaccStaccs deployed to:", token.address);
 }
 
 main()

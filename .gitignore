@@ -17,3 +17,6 @@ yarn-error.log
 bla/build
 bla/build
 pinata/node_modules
+
+# Local Netlify folder
+.netlify

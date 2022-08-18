@@ -133,7 +133,7 @@ Next to that, make sure to update background image by overwriting your own backg
 ##### 4.2 `public` folder :
 
 - Update existing demo cool cats images (cool-cats.gif, logo.jpg) with your owns images in project `public` folder. Make sure to name them identically.
-- Add your custom website title in `index.html` : `<title>MintSauce.art</title>`
+- Add your custom website title in `index.html` : `<title>staccArb.hackblock.space</title>`
 
 ##### 4.3 `Home.tsx` :
 

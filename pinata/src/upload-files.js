@@ -39,7 +39,7 @@ const { log, error } = console;
    * Load any existing file CID mappings to avoid attempting to upload
    * a file that may have already been uploaded and the CID is known.
    */
-  const pinataCIDs = fs.readJsonSync('./output/downloaded-cids.json') || {};
+  const pinataCIDs =  {};
   const pinata = pinataSDK(PINATA_API_KEY, PINATA_API_SECRET);
   console.log(pinataCIDs)
   /**
@@ -50,7 +50,7 @@ const { log, error } = console;
    * Pinata Rate Limit: https://docs.pinata.cloud/rate-limits
    */
   const rateLimiter = new Bottleneck({
-    maxConcurrent: 4,
+    maxConcurrent: 8,
     minTime: 1000, // Once every 3 seconds
   });
 
@@ -109,8 +109,8 @@ const { log, error } = console;
   };
 
   try {
-    const OUTPUT_PATH = './output/uploaded-cids.json';
-    const FOLDER_PATH = 'files'; // Folder containing files to upload
+    const OUTPUT_PATH = './md2-cids.json';
+    const FOLDER_PATH = 'metadata'; // Folder containing files to upload
     const cidMapping = {};
     const { files } = await recursive.read(FOLDER_PATH);
     if ((files && files.length) <= 0) {

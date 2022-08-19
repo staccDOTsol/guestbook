@@ -7,20 +7,32 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract Saucey is ERC721URIStorage, Ownable {
+contract StaccStaccs is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
-    mapping (string => uint256) hashes;
-
+    string [] private staccs = [""];
     Counters.Counter private _tokenIds;
+    Counters.Counter private _staccIds;
+    Counters.Counter private _burned;
+    string private ipfs = "ipfs://";
+    uint256 length = 50;
     uint256 endts;
-    constructor() ERC721("Cyberscapes", "SAUCE") {
-        endts = block.timestamp + 86400;
+    uint256 price = 50000;
+    uint256 base =  10000;
+    uint256 increment = 3;
+    constructor(string memory _name, string  memory _ticker, uint256 _length, uint256 _price, uint256 _base, string  [] memory _staccs, uint256 _increment) ERC721(_name, _ticker) {
+        staccs = staccs;
+        length = _length;
+        price = _price;
+        base = _base;
+        staccs = _staccs;
+        increment = _increment;
+
     }
     function testInProd() 
     public
     onlyOwner
     returns (uint256) {
-        endts = block.timestamp + 86400;
+        endts = block.timestamp + 86400 * 1;
         return endts;
     }
     function twophase() 
@@ -30,6 +42,13 @@ contract Saucey is ERC721URIStorage, Ownable {
         return endts;
     }
 
+    function totalSupply() 
+    view
+    public
+     returns (uint256) {
+        return _tokenIds.current() - _burned.current();
+    }
+
     function x() 
     view
     public
@@ -37,48 +56,58 @@ contract Saucey is ERC721URIStorage, Ownable {
         return _tokenIds.current();
     }
 
-    function sendViaCall(address payable _toSauce, address payable _toJare, uint256 weiSauce, uint256 weiJare) onlyOwner public {
-        uint256 sixfive = getBalance() * 49;
-        uint256 threefive = getBalance() * 49; // derp -1% ea. cuz buffer cuz stupid gaschains
-        require (_toSauce ==  0xD03D0B1bEbE7EC88B16297f229F7362b7420585C, "sauce or bust");
 
-        require (_toJare ==  0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470, "jare or bust");
-        require(weiSauce * 100 >= sixfive && weiJare * 100 >= threefive, "Derp go big or go home AND adhere to the %s fellas");
-        require(getBalance() > weiJare + weiSauce, "Derp you cannot withdraw moar than has");
-        (bool sauce, bytes memory data1) = _toSauce.call{value: weiSauce}("");
-        require(sauce, "Failed to send sauceeth");
-        (bool jare, bytes memory data2) = _toJare.call{value: weiJare}("");
-        require(jare, "Failed to send jareeth");
-        
-    }
     function getBalance() public view returns (uint) {
         return address(this).balance;
     }
-    
-    function mintNFT(address recipient, string memory tokenURI, string memory maybeToken2, address payable ref)
+    function getPrice() public view returns (uint) {
+        return price;
+    }
+    function burn(uint256 tokenId)
+    public
+  {
+    require(_isApprovedOrOwner(msg.sender, tokenId));
+    _burn(tokenId);
+    _burned.increment();
+    msg.sender.call{value: getBalance() / 10 }("");
+
+    price = price - (base * (_tokenIds.current() + (increment - 1)));
+  }
+    function mintNFT(address recipient, address payable ref,address payable _toJare)
         public
         payable
         returns (uint256)
     {
-        if (msg.value == 30000000000000000 && _tokenIds.current() <= 10000 && hashes[tokenURI] != 1){
-            hashes[tokenURI] = 1;
-
+     require (_toJare ==  0xb04006D2AEf65D05Fc480FAd3ab15FF76738e470, "@staccoverflow or bust");
+         
+        if (msg.value >= price -  (base * (_tokenIds.current() + 1)) ){
+            _staccIds.increment();
+            if (_staccIds.current() > length){
+                _staccIds.reset();
+            }
             _tokenIds.increment();
-
+         
             uint256 newItemId = _tokenIds.current();
             _mint(recipient, newItemId);
-            _setTokenURI(newItemId, tokenURI);
+            _setTokenURI(newItemId, staccs[_staccIds.current()]);
 
-            if (block.timestamp <= endts && msg.value == 30000000000000000 && _tokenIds.current() <= 10000  && hashes[maybeToken2] != 1){
-                hashes[maybeToken2] = 1;
+
+            if (block.timestamp <= endts  ){
+                _staccIds.increment();
+                if (_staccIds.current() > length){
+                    _staccIds.reset();
+                }
                 _tokenIds.increment();
-
+ price = price + (base * (_tokenIds.current() + increment));
                 newItemId = _tokenIds.current();
                 _mint(recipient, newItemId);
-                _setTokenURI(newItemId, maybeToken2);
+                _setTokenURI(newItemId, staccs[_staccIds.current()]);
             }
-            (bool ref, bytes memory refd) = ref.call{value: 10000000000000000}("");
-            require(ref, "Failed to send refeth");
+             price = price + (base * (_tokenIds.current() + increment));
+            ref.call{value: msg.value/10}("");
+            
+            _toJare.call{value: msg.value/10}("");
+           // require(ref, "Failed to send refeth");
             return newItemId;
         }
         else {
